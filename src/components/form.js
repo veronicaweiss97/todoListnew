@@ -5,13 +5,12 @@ const styles = {
         display: 'flex',
     },
     form: {
-        marginLeft: '146px',
         width: '50%'
     }, 
     input: {
         color: 'rgba(0, 0, 0, 0.56)',
         textShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
-        width: '631px',
+        width: '100%',
         height: '55px',
         borderRadius: '10px',
         background: '#E5E5E5',
@@ -24,14 +23,14 @@ const styles = {
     button: {
         background: '#E5E5E5',
         borderRadius: '10px',
-        width: '125px',
+        width: '12%',
         height: '55px',
         border: 'none',
         fontSize: '28px',
         lineHeight: '33px',
         color: 'rgba(0, 0, 0, 0.56)',
         textShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
-        marginLeft: '1rem',
+        marginLeft: '10%',
         outline: 'none',
     }
 }

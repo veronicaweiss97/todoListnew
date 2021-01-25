@@ -21,4 +21,8 @@ code {
 .titles:hover {
   text-shadow: 0px 0px 14px #C4C4C4;
 }
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
 

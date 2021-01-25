@@ -4,7 +4,7 @@ const styles = {
     div: {
         display: 'flex',
         width: '100%',
-        justifyContent: 'space-around'
+        justifyContent: 'space-between'
     },
     h1: {
         fontSize: 48,
