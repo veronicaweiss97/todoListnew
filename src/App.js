@@ -13,6 +13,18 @@ export default class App extends Component {
         {id: 3, completed: false, title: 'Learn Node.js'}
       ]
     }
+    this.addToDo = this.addToDo.bind(this)
+  }
+
+
+  getRandomId = () => `f${(~~(Math.random() * 1e8)).toString(16)}`; 
+
+  addToDo(title) {
+    const newToDo = {id: this.getRandomId(), completed: false, title: title}
+    this.setState(({data}) => {
+      const newArr = [...data, newToDo]
+      return {data: newArr}
+    })
   }
  
   render() {
@@ -20,8 +32,8 @@ export default class App extends Component {
       <div className="App">
         <div className="container">
         <Header/>
-        <Form/>
-        <TodoList todos={this.state.data}/>
+        <Form addToDo={this.addToDo} />
+        <TodoList todos={this.state.data} />
         </div>
       </div>
     );

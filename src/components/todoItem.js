@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import success from '../img/success.svg'
 import trash from '../img/trash.svg'
 
@@ -37,16 +37,22 @@ const styles = {
     }
 }
 
-export default function TodoItem() {
-    return(
-        <li style={styles.li}>
-                <hr style={styles.hr}/>
-                <div className='first' style={styles.first}>
-                    <img src={success}/>
-                    <p style={styles.text} className='text'>React learn everyday</p>
-                </div>
-                <div className='second' style={styles.second}>
-                    <img src={trash}/></div>
-        </li>
-    )
+export default class TodoItem extends Component {
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return(
+            <li style={styles.li}>
+                    <hr style={styles.hr}/>
+                    <div className='first' style={styles.first}>
+                        <img src={success}/>
+                        <p style={styles.text} className='text'>{this.props.todo.title}</p>
+                    </div>
+                    <div className='second' style={styles.second}>
+                        <img src={trash}/></div>
+            </li>
+        )
+    }
+
 }
